@@ -1,0 +1,24 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+% Data
+
+
+
+The data were organized in a Google sheet file which can be read directly using the *gsheet* package. Let's create the dataset and name it as `dataws`. 
+
+Let's have a quick look at the dataset.
+
+```{r}
+data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1oBa_OIko04157D0-Z0tV7dN8BJxq9fAjEfbOkoSKy5s/edit?usp=sharing", sheetid = "all-data")
+data
+
+```
+
+
+```{r}
+dplyr::glimpse(data)
+
+```
